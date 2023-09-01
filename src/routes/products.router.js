@@ -7,8 +7,24 @@ const router = Router()
 
 
 router.get('/', async(req, res) =>{
-    const products = await productModel.find().lean().exec()
-    res.render('index', {products})
+    const page = parseInt(req.query?.page || 1)
+    const limit = parseInt(req.query?.limit || 10)
+    const queryParams = req.query?.query || ''
+    const query = {}
+    if (queryParams) {
+        const field = queryParams.split(',')[0]
+        let value = queryParams.split(',')[1]
+            if(!isNaN(parseInt(value))) value = parseInt(value)
+            query[field] = value            
+
+    }
+
+    const result = await productModel.paginate(query,{
+        page,
+        limit,
+        lean: true
+    })
+    res.render('index', result)
    
     
 })
