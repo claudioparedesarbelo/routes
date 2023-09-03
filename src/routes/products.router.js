@@ -8,7 +8,7 @@ const router = Router()
 
 router.get('/', async(req, res) =>{
     const page = parseInt(req.query?.page || 1)
-    const limit = parseInt(req.query?.limit || 10)
+    const limit = parseInt(req.query?.limit || 8)
     const queryParams = req.query?.query || ''
     const query = {}
     if (queryParams) {
