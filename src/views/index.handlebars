@@ -24,14 +24,26 @@
       </form>
     </div>
   </div>
+ 
 </nav>
-
+ 
 </header>
-
+<div class="wrapper">
+<div class="buttonsSort">
+  Sort by
+  <button type="button" class="btn btn-primary" id="price">Price</button>
+  <button type="button" class="btn btn-primary" id="category">Category</button>
+  <button type="button" class="btn btn-primary" id="brand">Brand</button>
+</div>
+<div class="btn-group" role="group" aria-label="Basic example" id="buttonProd">
+  Product x pag
+  <button type="button" class="btn btn-primary" id="8">8</button>
+  <button type="button" class="btn btn-primary" id="12">12</button>
+  <button type="button" class="btn btn-primary" id="16">16</button>
+</div>
+</div>
 <main class="centrado">
 <div class="formatoPagina">
-
-<h2>Products</h2>
 
 <hr>
 <div id="contenedorProductos"> 
@@ -49,21 +61,21 @@
 {{/each}}
 
 </div>
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+
 </div>
+
 </main>
+<div class="pagination">
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group me-2" role="group" aria-label="First group">
+    <button type="button" class="btn btn-primary" id="p1">1</button>
+    <button type="button" class="btn btn-primary" id="p2">2</button>
+    <button type="button" class="btn btn-primary" id="p3">3</button>
+  </div>
+  </div>
+</div>
+
+
 <footer class="footer">
   <div class="firstLine">
   <div>
@@ -138,3 +150,4 @@
   <p>*Consulta los métodos, plazos y gastos de envío disponibles en el siguiente enlace. **Los precios de venta de los artículos de nuestro catálogo incluyen IVA. Los precios para las entregas con destino a Canarias, Ceuta, Melilla y Andorra incluyen impuestos indirectos. Los precios de venta de los artículos de nuestro catálogo son los recomendados desde central a día de ayer. Gastos de envío no incluidos. Fotos de los productos no contractuales.</p>
 </div>
 </footer>
+<script src="/js/index.js" ></script>

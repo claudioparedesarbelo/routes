@@ -32,6 +32,10 @@
   <input type="text" name= "marca" class="form-control" id="formGroupExampleInput" placeholder="Insert Marca">
 </div>
 <div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Categoria</label>
+  <input type="text" name= "categoria" class="form-control" id="formGroupExampleInput" placeholder="Insert Marca">
+</div>
+<div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">Description</label>
   <input type="text" name= "description" class="form-control" id="formGroupExampleInput2" placeholder="Insert Description">
 </div>
@@ -63,6 +67,7 @@
         <tr>
             
             <td>Marca</td>
+            <td>Categoria</td>
             <td>Description</td>
             <td>Code</td>
             <td>Price</td>
@@ -77,6 +82,7 @@
         <tr>
             
             <td>{{this.marca}}</td>
+            <td>{{this.categoria}}</td>
             <td>{{this.description}}</td>
             <td>{{this.code}}</td>
             <td>${{this.price}}</td>
@@ -97,6 +103,7 @@
         e.preventDefault()
 
         const marca = document.querySelector('input[name=marca]').value
+        const categoria = document.querySelector('input[name=categoria]').value
         const description = document.querySelector('input[name=description]').value
         const code = document.querySelector('input[name=code]').value
         const price = parseInt(document.querySelector('input[name=price]').value)
@@ -114,6 +121,7 @@
                 html += `<tr>
                
                 <td>${product.marca}</td>
+                <td>${product.categoria}</td>
                 <td>${product.description}</td>
                 <td>${product.code}</td>
                 <td>${product.price}</td>
